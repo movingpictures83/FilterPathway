@@ -1,0 +1,2 @@
+Prefix plugins/FilterPathway/example/
+Plugin FilterPathway inputfile files.txt outputfile pathwayinfo.filtered.txt

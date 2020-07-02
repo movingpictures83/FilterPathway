@@ -1,0 +1,2 @@
+correlationfile	plugins/FilterPathway/example/testdata.csv
+pathwayfile	plugins/FilterPathway/example/pathwayinfo.txt
