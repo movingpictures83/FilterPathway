@@ -2,7 +2,7 @@ import sys
 #import numpy
 #from plugins.CSV2GML.CSV2GMLPlugin import *
 from CSV2GML.CSV2GMLPlugin import *
-
+import PyPluMA
 
 
 class FilterPathwayPlugin(CSV2GMLPlugin):
@@ -15,9 +15,9 @@ class FilterPathwayPlugin(CSV2GMLPlugin):
          myline = line.strip()
          entries = myline.split('\t')
          if (entries[0] == 'correlationfile'):
-            self.myfile = entries[1]
+            self.myfile = PyPluMA.prefix()+"/"+entries[1]
          elif (entries[0] == 'pathwayfile'):
-            self.mypathways = entries[1]
+            self.mypathways = PyPluMA.prefix()+"/"+entries[1]
          # Ignore everything else
 
    def run(self):
